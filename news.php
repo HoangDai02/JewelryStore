@@ -149,9 +149,9 @@
                     <div class="contentMedia__list">
                         <figure class="contentMedia__listImage"><a href="newsdetails.php"><img src="assets/images/news5.webp" alt=""></a></figure>
                         <div class="contentMedia__listText">
-                            <h4 class="contentMedia__listSubTitle"><a href="newsdetails.php">RƯỚC MÈO ĐẠI CÁT - NĂM MỚI ĐẠI PHÁT</a></h4>
-                            <div class="contentMedia__listUser"><img src="assets/calendar.svg" alt=""> 30/4/2024 &nbsp; <img src="assets/user.svg" alt=""> saomai &nbsp; <img src="assets/eye.svg" alt=""> 87</div>
-                            <p class="contentMedia__listDesc">Nhân dịp chào đón Tết Quý Mão 2023, JEWELRY STORE ra mắt bộ trang sức độc quyền mới mang tên Mèo Đại Cát. Theo Hán Văn: “Đại” nghĩa là lớn, “cát” nghĩa là may mắn. Thiết kế Mèo Đại Cát mang ý nghĩa đem đến những điều may mắn, tốt lành cho người</p>
+                            <h4 class="contentMedia__listSubTitle"><a href="newsdetails.php">RƯỚC RẮN ĐẠI CÁT - NĂM MỚI ĐẠI PHÁT</a></h4>
+                            <div class="contentMedia__listUser"><img src="assets/calendar.svg" alt=""> 30/12/2024 &nbsp; <img src="assets/user.svg" alt=""> saomai &nbsp; <img src="assets/eye.svg" alt=""> 87</div>
+                            <p class="contentMedia__listDesc">Nhân dịp chào đón Tết Ất Tỵ 2025, JEWELRY STORE ra mắt bộ trang sức độc quyền mới mang tên Rắn Đại Cát. Theo Hán Văn: “Đại” nghĩa là lớn, “cát” nghĩa là may mắn. Thiết kế Rắn Đại Cát mang ý nghĩa đem đến những điều may mắn, tốt lành cho người</p>
                         </div>
                     </div>
                     <div class="contentMedia__list">
@@ -166,7 +166,7 @@
                         <figure class="contentMedia__listImage"><a href="newsdetails.php"><img src="assets/images/news2.webp" alt=""></a></figure>
                         <div class="contentMedia__listText">
                             <h4 class="contentMedia__listSubTitle"><a href="newsdetails.php">GỢI Ý QUÀ TẶNG 8/3 KHÔNG CHỈ GIÁ TRỊ MÀ CÒN TINH TẾ</a></h4>
-                            <div class="contentMedia__listUser"><img src="assets/calendar.svg" alt=""> 30/4/2024 &nbsp; <img src="assets/user.svg" alt=""> saomai &nbsp; <img src="assets/eye.svg" alt=""> 87</div>
+                            <div class="contentMedia__listUser"><img src="assets/calendar.svg" alt=""> 1/3/2024 &nbsp; <img src="assets/user.svg" alt=""> saomai &nbsp; <img src="assets/eye.svg" alt=""> 87</div>
                             <p class="contentMedia__listDesc">Đến hẹn lại lên, 8/3 luôn là thời điểm khiến cánh mày râu loay hoay suy nghĩ, tìm kiếm sự trợ giúp tư vấn tặng quà mẹ, vợ hay bạn gái. Với phụ nữ, họ làm những điều đôi khi không ai thấy, chỉ cần sự luôn hiện diện của bạn ở bên là đủ. Một món quà </p>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                         <figure class="contentMedia__listImage"><a href="newsdetails.php"><img src="assets/images/news4.webp" alt=""></a></figure>
                         <div class="contentMedia__listText">
                             <h4 class="contentMedia__listSubTitle"><a href="newsdetails.php">ĐẶT MỚI NHẪN CƯỚI JEWELRY STORE MẤT BAO LÂU?</a></h4>
-                            <div class="contentMedia__listUser"><img src="assets/calendar.svg" alt=""> 30/10/2023 &nbsp; <img src="assets/user.svg" alt=""> saomai &nbsp; <img src="assets/eye.svg" alt=""> 87</div>
+                            <div class="contentMedia__listUser"><img src="assets/calendar.svg" alt=""> 30/11/2023 &nbsp; <img src="assets/user.svg" alt=""> saomai &nbsp; <img src="assets/eye.svg" alt=""> 87</div>
                             <p class="contentMedia__listDesc">ùa cưới 2022, JEWELRY STORE mang đến đặc quyền đặt mới nhẫn cưới nhanh nhất chỉ từ 7 đến 12 ngày, hỗ trợ tốt nhất cho cô dâu chú rể bước vào hành trình hôn nhân trọn vẹn.  TẠI SAO NÊN ĐẶT MỚI NHẪN CƯỚI?Nhẫn cưới là tín vật biểu tượng của hô...</p>
                         </div>
                     </div>

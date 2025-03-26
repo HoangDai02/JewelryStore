@@ -146,7 +146,7 @@
             <div class="contentMedia__left">
                 <h2 class="contentMedia__title">GỢI Ý QUÀ TẶNG 8/3 KHÔNG CHỈ GIÁ TRỊ MÀ CÒN TINH TẾ</h2>
                 <div class="contentMedia__info">
-                    <div class="contentMedia__name">Bởi:<strong>admin</strong> <img src="assets/calendar.svg" alt="">4/5/2023</div>
+                    <div class="contentMedia__name">Bởi:<strong>admin</strong> <img src="assets/calendar.svg" alt="">4/3/2024</div>
                     <div class="contentMedia__views"><img src="assets/eye.svg" alt="">12</div>
                 </div>
 
