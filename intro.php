@@ -36,7 +36,7 @@
             <a href="register.php" class="menu-link">Tài khoản</a>
             <a href="cart.php" class="menu-link">Giỏ hàng</a>
             <a href="intro.php" class="menu-link">Giới thiệu</a>
-            <a href="news.php" class="menu-link">Tin tức</a>
+            <a href="news.php" class="menu-link">Blog</a>
         </div>
         <div class="menu-icon close">
             <span></span>
@@ -56,7 +56,7 @@
                 <a href="customer/my_account.php?my_orders" class="menuLink">Tài khoản</a>
                 <a href="cart.php" class="menuLink">Giỏ hàng</a>
                 <a href="intro.php" class="menuLink active">Giới thiệu</a>
-                <a href="news.php" class="menuLink">Tin tức</a>
+                <a href="news.php" class="menuLink">Blog</a>
             </div>
         </div>
         <div class="iconWrapper">

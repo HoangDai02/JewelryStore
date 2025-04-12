@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tin tức</title>
+    <title>Blog</title>
     <!--fonts-->
     <link rel="stylesheet" href="fonts/rougescript.css">
     <!--script swiper-->
@@ -36,7 +36,7 @@
             <a href="register.php" class="menu-link">Tài khoản</a>
             <a href="cart.php" class="menu-link">Giỏ hàng</a>
             <a href="intro.php" class="menu-link">Giới thiệu</a>
-            <a href="news.php" class="menu-link">Tin tức</a>
+            <a href="news.php" class="menu-link">Blog</a>
         </div>
         <div class="menu-icon close">
             <span></span>
@@ -56,7 +56,7 @@
                 <a href="customer/my_account.php?my_orders" class="menuLink">Tài khoản</a>
                 <a href="cart.php" class="menuLink">Giỏ hàng</a>
                 <a href="intro.php" class="menuLink">Giới thiệu</a>
-                <a href="news.php" class="menuLink active"">Tin tức</a>
+                <a href="news.php" class="menuLink active"">Blog</a>
             </div>
         </div>
         <div class="iconWrapper">
@@ -144,7 +144,7 @@
         </div>
         
         <section class="contentMedia"><div class="contentMedia__left">
-                <h2 class="contentMedia__listTitle">Tin tức</h2>
+                <h2 class="contentMedia__listTitle">Blog</h2>
                 <div class="contentMedia__listWrapper">
                     <div class="contentMedia__list">
                         <figure class="contentMedia__listImage"><a href="newsdetails.php"><img src="assets/images/news5.webp" alt=""></a></figure>

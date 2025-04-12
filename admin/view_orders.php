@@ -41,23 +41,23 @@ if (!isset($_SESSION['admin_email'])) {
                             <?php
                             $i = 0;
 
-                            // Truy vấn tất cả đơn hàng và sắp xếp theo ngày giảm dần (mới nhất trước)
+                            // Truy vấn tất cả đơn hàng và tính tổng tiền cho mỗi đơn hàng
                             $get_orders = "SELECT 
-                                                co.invoice_no, 
-                                                co.order_id, 
-                                                co.customer_id, 
-                                                co.due_amount, 
-                                                co.order_date, 
-                                                co.order_status, 
-                                                c.customer_email 
-                                            FROM 
-                                                customer_orders co 
-                                            JOIN 
-                                                customers c ON co.customer_id = c.customer_id 
-                                            GROUP BY 
-                                                co.invoice_no 
-                                            ORDER BY 
-                                                co.order_date DESC"; // Sắp xếp theo ngày giảm dần
+                                co.invoice_no, 
+                                co.order_id, 
+                                co.customer_id, 
+                                SUM(co.due_amount) AS total_amount, 
+                                co.order_date, 
+                                co.order_status, 
+                                c.customer_email 
+                            FROM 
+                                customer_orders co 
+                            JOIN 
+                                customers c ON co.customer_id = c.customer_id 
+                            GROUP BY 
+                                co.invoice_no 
+                            ORDER BY 
+                                co.order_date DESC"; // Sắp xếp theo ngày giảm dần
 
                             $run_orders = mysqli_query($conn, $get_orders);
 
@@ -69,7 +69,7 @@ if (!isset($_SESSION['admin_email'])) {
                                     $customer_email = $row_order['customer_email'];
                                     $invoice_no = $row_order['invoice_no'];
                                     $order_date = date("d/m/Y H:i:s", strtotime($row_order['order_date'])); // Định dạng ngày tháng
-                                    $order_amount = number_format((float)$row_order['due_amount']);
+                                    $order_amount = number_format((float)$row_order['total_amount']); // Lấy tổng tiền đã tính toán
                                     $order_status = $row_order['order_status'];
 
                                     $i++;

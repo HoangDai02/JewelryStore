@@ -30,7 +30,6 @@ if (!isset($_SESSION['admin_email'])) {
             
             <div class="panel-body">
                 <div class="table-responsive">
-                    <!--table-->
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
@@ -52,7 +51,7 @@ if (!isset($_SESSION['admin_email'])) {
                                 $view_order_detail = $_GET['view_order_detail'];
 
                                 $i = 0;
-                                $total_amount = 0;
+                                $total_amount = 0; // Khởi tạo tổng tiền
 
                                 $get_orders = "SELECT * FROM customer_orders WHERE invoice_no = '$view_order_detail'";
                                 $run_orders = mysqli_query($conn, $get_orders);
@@ -61,7 +60,6 @@ if (!isset($_SESSION['admin_email'])) {
                                     $order_id = $row_order['order_id'];
                                     $customer_id = $row_order['customer_id'];
                                     $order_amount = number_format((float)$row_order['due_amount']);
-                                    $total_amount += $row_order['due_amount'];
                                     $invoice_no = $row_order['invoice_no'];
                                     $product_id = $row_order['product_id'];
                                     $product_size = $row_order['product_size'];
@@ -73,6 +71,7 @@ if (!isset($_SESSION['admin_email'])) {
                                     $run_products = mysqli_query($conn, $get_products);
                                     $row_products = mysqli_fetch_array($run_products);
                                     $product_title = $row_products['product_title'];
+                                    $product_price = $row_products['product_price']; // Lấy giá sản phẩm
 
                                     $get_customer = "SELECT * FROM customers WHERE customer_id='$customer_id'";
                                     $run_customer = mysqli_query($conn, $get_customer);
@@ -80,6 +79,10 @@ if (!isset($_SESSION['admin_email'])) {
                                     $customer_email = $row_customer['customer_email'];
 
                                     $i++;
+                                    
+                                    // Tính tổng tiền cho từng sản phẩm và cộng dồn vào $total_amount
+                                    $item_total = $product_price * $product_quantity;
+                                    $total_amount += $item_total;
                             ?>
                                     <tr>
                                         <td><?php echo $i; ?></td>
@@ -88,14 +91,18 @@ if (!isset($_SESSION['admin_email'])) {
                                         <td><?php echo $product_quantity; ?></td>
                                         <td><?php echo $product_size; ?></td>
                                         <td><?php echo $order_date; ?></td>
-                                        <td><?php echo $order_amount; ?>₫</td>
+                                        <td><?php echo number_format((float)$item_total); ?>₫</td> 
                                         <td>
-                                            <span class="wrapperDelete">
-                                                <a class="tableDelete" href="index.php?delete_order=<?php echo $order_id; ?>&invoice_no=<?php echo $invoice_no; ?>">
-                                                    <i class="fa fa-trash-o"></i>
-                                                    <div class="tooltip">Không thể khôi phục khi nhấn</div>
-                                                </a>
-                                            </span>
+                                            <?php if ($order_status != 'Completed'): ?>
+                                                <span class="wrapperDelete">
+                                                    <a class="tableDelete" href="index.php?delete_order=<?php echo $order_id; ?>&invoice_no=<?php echo $invoice_no; ?>">
+                                                        <i class="fa fa-trash-o"></i>
+                                                        <div class="tooltip">Không thể khôi phục khi nhấn</div>
+                                                    </a>
+                                                </span>
+                                            <?php else: ?>
+                                                <span style="color: gray">Hoàn thành</span>
+                                            <?php endif; ?>
                                         </td>
                                         <td style="color: blue;">
                                             <?php
@@ -107,6 +114,8 @@ if (!isset($_SESSION['admin_email'])) {
                                                 echo "<span style='color:#00cc07; font-size: 18px'>Đã giao</span>";
                                             } else if ($order_status == 'Cancelled') {
                                                 echo "<span style='color:#ff0000; font-size: 18px'>Đã hủy</span>";
+                                            } else if ($order_status == 'Completed'){
+                                                echo "<span style='color:#00008b; font-size: 18px'>Hoàn thành</span>";
                                             } else {
                                                 echo "<span style='color:#0088cc; font-size: 18px'>Đã xác nhận</span>";
                                             }
@@ -117,6 +126,7 @@ if (!isset($_SESSION['admin_email'])) {
                                             <a href="index.php?confirm_delivering=<?php echo $order_id; ?>&invoice_no=<?php echo $invoice_no; ?>" style="background: #cb456d;" class="btn btn-primary btn-sm btn-confim">Đang giao</a>
                                             <a href="index.php?confirm_delivered=<?php echo $order_id; ?>&invoice_no=<?php echo $invoice_no; ?>" style="background: #00cc07;" class="btn btn-primary btn-sm btn-confim">Đã giao</a>
                                             <a href="index.php?confirm_cancelled=<?php echo $order_id; ?>&invoice_no=<?php echo $invoice_no; ?>" style="background: #ff0000;" class="btn btn-primary btn-sm btn-confim">Hủy đơn hàng</a>
+                                            <a href="index.php?confirm_completed=<?php echo $order_id; ?>&invoice_no=<?php echo $invoice_no; ?>" style="background: #00008b;" class="btn btn-primary btn-sm btn-confim">Hoàn thành</a>
                                         </td>
                                     </tr>
                             <?php
@@ -125,7 +135,6 @@ if (!isset($_SESSION['admin_email'])) {
                             ?>
                         </tbody>
                     </table>
-                    <!--end table-->
                     <?php
                     $total_amount = number_format((float)$total_amount);
                     echo "<h4 style='color: #48be50'>Tổng tiền đơn hàng là: $total_amount VNĐ</h4>";
