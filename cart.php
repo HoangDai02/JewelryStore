@@ -289,7 +289,7 @@
 
                                         echo "
                                             <a href='order.php?customer_id= $customer_id' class='btn__right colorBlue'>
-                                                <span>Tiến hành đặt hàng</span>
+                                                <span>Thanh toán khi nhận được hàng</span>
                                                 <img class='btn__image2' src='assets/go-to-pays.svg' alt=''>
                                             </a>
                                             <a href='http://localhost/JewelryStore/vnpay_php' class='btn__right color'>
@@ -304,7 +304,7 @@
                                 if ($count_cart > 0) {
                                     echo "
                                     <a href='customer/login.php' class='btn__right colorBlue'>
-                                        <span>Tiến hành đặt hàng</span>
+                                        <span>Thanh toán khi nhận được hàng</span>
                                         <img class='btn__image2' src='assets/go-to-pays.svg' alt=''>
                                     </a>
                                     
